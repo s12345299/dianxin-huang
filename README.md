@@ -17,3 +17,6 @@
 ├── week5
 │   ├── code
 │   │   ├── 1        # stm32电机驱动
+├── week6
+│   ├── code
+│   │   ├── 1        # stm32电机pid
