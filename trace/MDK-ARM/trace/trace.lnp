@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"trace\startup_stm32f103xb.o"
+"trace\main.o"
+"trace\stm32f1xx_it.o"
+"trace\stm32f1xx_hal_msp.o"
+"trace\stm32f1xx_hal_gpio_ex.o"
+"trace\stm32f1xx_hal_tim.o"
+"trace\stm32f1xx_hal_tim_ex.o"
+"trace\stm32f1xx_hal.o"
+"trace\stm32f1xx_hal_rcc.o"
+"trace\stm32f1xx_hal_rcc_ex.o"
+"trace\stm32f1xx_hal_gpio.o"
+"trace\stm32f1xx_hal_dma.o"
+"trace\stm32f1xx_hal_cortex.o"
+"trace\stm32f1xx_hal_pwr.o"
+"trace\stm32f1xx_hal_flash.o"
+"trace\stm32f1xx_hal_flash_ex.o"
+"trace\stm32f1xx_hal_exti.o"
+"trace\stm32f1xx_hal_uart.o"
+"trace\system_stm32f1xx.o"
+"trace\oled.o"
+--strict --scatter "trace\trace.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "trace.map" -o trace\trace.axf
