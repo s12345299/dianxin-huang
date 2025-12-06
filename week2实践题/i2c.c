@@ -3,15 +3,20 @@
 void Start(void)
 {
     SDA_High();
+    HAL_Delay(10);
     SCL_High();
+    HAL_Delay(10);
     SDA_Low();
+    HAL_Delay(10);
     SCL_Low();
 
 }
 void Stop(void)
 {
     SDA_Low();
+    HAL_Delay(10);
     SCL_High();
+    HAL_Delay(10);
     SDA_High();
 
 
@@ -27,6 +32,7 @@ void SendByte(unsigned char data)
             SDA_Low();
         }
         SCL_High();
+        HAL_Delay(10);
         SCL_Low();
         data<<=1;
 
@@ -36,7 +42,9 @@ void SendByte(unsigned char data)
 unsigned char ReceiveAck(void){
     unsigned char b;
     SCL_Low();
+    HAL_Delay(10);
     SDA_High();
+    HAL_Delay(10);
     SCL_High();
     if(SDA_Read())
     {
