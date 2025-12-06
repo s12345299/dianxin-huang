@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"interrupt_\startup_stm32f103xb.o"
+"interrupt_\main.o"
+"interrupt_\stm32f1xx_it.o"
+"interrupt_\stm32f1xx_hal_msp.o"
+"interrupt_\stm32f1xx_hal_gpio_ex.o"
+"interrupt_\stm32f1xx_hal_tim.o"
+"interrupt_\stm32f1xx_hal_tim_ex.o"
+"interrupt_\stm32f1xx_hal.o"
+"interrupt_\stm32f1xx_hal_rcc.o"
+"interrupt_\stm32f1xx_hal_rcc_ex.o"
+"interrupt_\stm32f1xx_hal_gpio.o"
+"interrupt_\stm32f1xx_hal_dma.o"
+"interrupt_\stm32f1xx_hal_cortex.o"
+"interrupt_\stm32f1xx_hal_pwr.o"
+"interrupt_\stm32f1xx_hal_flash.o"
+"interrupt_\stm32f1xx_hal_flash_ex.o"
+"interrupt_\stm32f1xx_hal_exti.o"
+"interrupt_\system_stm32f1xx.o"
+--strict --scatter "INTERRUPT_\INTERRUPT_.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "INTERRUPT_.map" -o INTERRUPT_\INTERRUPT_.axf
